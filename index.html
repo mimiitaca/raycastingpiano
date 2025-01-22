@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="overlay">
+      <p>Click anywhere to start</p>
+    </div>
+    <div id="instructions-overlay" onclick="closeInstructionsOverlay()">
+  <div id="instructions-content">
+    <h2>Instructions
+    </h2>
+    <ul>
+      <li>Press the keys A, S, D, F, G, H, J to play sounds.</li>
+      <li>Click the "Record" button to start recording audio.</li>
+      <li>Click "Stop" to stop the recording and save or discard it.</li>
+    </ul>
+  </div>
+</div>
+    <main></main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling when overlay is active */
+}
+
+@font-face {
+  font-family: 'RubikBubbles';
+  src: url('RubikBubbles-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ font-family: 'RubikBubbles', sans-serif; /* Apply the preloaded font */
+  font-size: 32px;
+ color: #cb4cd9; /* Change font color here (e.g., dark gray) */
+}
+
+#instructions-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1001;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  text-align: center;
+}
+
+#instructions-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+font-family: 'RubikBubbles', sans-serif; /* Apply the preloaded font */
+  
+}
+
+#instructions-content ul {
+  list-style-type: none;
+  padding: 0;
+text-align: left
+}
+
+#instructions-content ul li {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.particle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: rgb(86,0,0);
+  opacity: 1;
+  border-radius: 50%; /* Makes particles circular */
+  animation: particle-dissolve 1.5s forwards;
+}
+
+@keyframes particle-dissolve {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-100px + 200px * random()), calc(-100px + 200px * random()));
+  }
+}
